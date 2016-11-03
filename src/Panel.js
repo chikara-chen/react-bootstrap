@@ -102,6 +102,7 @@ class Panel extends React.Component {
         aria-controls={id}
         aria-expanded={expanded}
         aria-selected={expanded}
+        className={expanded ? null : 'collapsed' }
       >
         {header}
       </a>
@@ -182,7 +183,7 @@ class Panel extends React.Component {
       onExit,
       onExiting,
       onExited,
-      ...props,
+      ...props
     } = this.props;
 
     const [bsProps, elementProps] = splitBsPropsAndOmit(props, [
